@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Beauty products by Cinderella</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="/"><img class="logo" src="/images/logo.png" alt="logo"/></a>
+        <h1>Beauty Store</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="#all">All</a>
+          </li>
+          <li>
+            <a href="#face">FACE</a>
+            <ul>
+              <li><a href="#face_foundation">Foundation</a></li>
+              <li><a href="#face_powder">Powder</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#eyes">EYES</a>
+            <ul>
+              <li>
+                <a href="#eyes_mascara">Mascara</a>
+              </li>
+              <li>
+                <a href="#eyes_eyeshadows">Eyeshadows</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#lips">LIPS</a>
+            <ul>
+              <li>
+                <a href="#lips_lipstick">Lipstick</a>
+              </li>
+              <li>
+                <a href="#lips_lip-gloss">Lip Gloss</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="/contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="main">
+        <h4>Products List</h4>
+        <img
+          class="cover"
+          src="/images/main.jpg"
+          alt="cover"
+          title="photo retrieved from https://unsplash.com/"
+        />
+        <p class="breadcrumbs"></p>
+      </section>
+
+      <footer>
+        <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+        <form action="https://formspree.io/f/xleowzjd" method="POST">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="email-input"
+            placeholder="your@email.com"
+          />
+          <span class="email-btn">
+            <button type="submit">Subscribe</button>
+          </span>
+        </form>
+        <p>
+          <a href="https://facebook.com" target="_blank" style="float: left;">
+            <img
+              src="https://image.flaticon.com/icons/png/128/124/124010.png"
+              srcset="https://image.flaticon.com/icons/png/128/124/124010.png 4x"
+              alt="facebook"
+            />
+          </a>
+          <span>&copy; Cinderella 2020</span>
+        </p>
+      </footer>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

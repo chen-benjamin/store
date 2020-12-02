@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+}
+
+/* header */
+header {
+  width: 100%;
+  text-align: center;
+  background-color: #eeeeee;
+}
+
+header a,
+header h1 {
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+header h1 {
+  margin-left: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* nav */
+nav {
+  background-color: #222831;
+  font-family: 'Teko', sans-serif;
+  font-size: 28px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav a:link,
+nav a:visited {
+  display: block;
+  color: #ffffff;
+  background-color: #222831;
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+nav ul li ul {
+  padding: 8px 12px;
+  position: absolute;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+}
+
+nav ul li:hover ul {
+  display: block;
+  padding: 0;
+  width: 150px;
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul li ul li {
+  display: block;
+  text-align: left;
+  width: 150px;
+}
+
+nav a:hover {
+  background-color: #ffd369;
+  color: #ffffff;
+}
+
+/* main */
+.main {
+  margin: 0;
+  font-size: 0;
+}
+
+.main img {
+  width: 100%;
+}
+
+.breadcrumbs {
+  display: none;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #393e46;
+  padding: 20px;
+  background-color: #eeeeee;
+  margin: 0;
+}
+
+/* card */
+.card {
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #393e46;
+  font-family: 'Dancing Script', cursive;
+}
+
+@media only screen and (min-width: 901px) {
+  .card {
+    width: calc(50% - 2px);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .card {
+    width: 100%;
+  }
+}
+
+.card-content {
+  border-top: 1px solid #393e46;
+}
+
+.card-content h4 {
+  font-size: 24px;
+  color: #222831;
+}
+
+.card-content p {
+  font-size: 18px;
+  color: #393e46;
+}
+
+.card-content .price {
+  font-size: 18px;
+  color: #222831;
+}
+
+/* footer */
+footer {
+  background-color: black;
+  text-align: right;
+}
+
+footer p {
+  margin: 0;
+  color: white;
+  padding: 20px;
+}
+
+footer h4 {
+  margin: 0;
+  color: white;
+  margin-right: 10px;
+  padding: 30px 10px 10px;
+  font-size: 18px;
+}
+
+footer form {
+  padding-right: 20px;
+}
+
+.email-input {
+  height: 30px;
+  width: 210px;
+  background: #eeeeee;
+  border-color: transparent;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  padding: 0 0 0 20px;
+}
+
+.email-input:focus {
+  outline: none;
+}
+
+.email-btn {
+  text-align: center;
+  margin-left: -5px;
+}
+
+.email-btn button {
+  height: 30px;
+  border-radius: 0 10px 10px 0;
+  background: #393e46;
+  color: #fff;
+  border: none;
+  padding: 0 10px;
+}

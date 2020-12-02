@@ -1,0 +1,22 @@
+.main {
+  font-size: 24px;
+}
+
+.main form {
+  padding: 20px;
+  background-color: #ffd369;
+}
+
+.main form input,
+.main form textarea {
+  background-color: #eee;
+  border: 1px solid black;
+}
+
+.orderNumber {
+  display: none;
+}
+
+#message {
+  width: 100%;
+}

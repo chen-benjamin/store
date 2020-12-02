@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Cinderella - Contact Us</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="/"><img class="logo" src="/images/logo.png" alt="logo"/></a>
+        <h1>Beauty Store</h1>
+      </header>
+
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section class="main">
+        <h4 class="breadcrumbs" style="display: block;font-weight: unset;">Home > Contact Us</h4>
+        <form action="https://formspree.io/f/meqplngg" method="POST">
+          <!-- <form action="https://httpbin.org/post" method="POST"> -->
+          <fieldset>
+            <legend>Contact Us</legend>
+
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" name="name" id="name" />
+            </div>
+
+            <div>
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" />
+            </div>
+
+            <div>
+              <label for="city">City:</label>
+              <input list="cities" name="city" id="city" />
+
+              <datalist id="cities">
+                <option value="Toronto"> </option>
+              </datalist>
+            </div>
+
+            <div>
+              <label for="postCode">Postal Code:</label>
+              <input type="text" name="postCode" id="postCode" />
+            </div>
+
+            <div>
+              <input type="radio" name="question" id="question" />Question
+              <input type="radio" name="comment" id="comment" />Comment
+              <input type="radio" name="orderProblem" id="orderProblem" />Order Problem
+            </div>
+
+            <div class="orderNumber">
+              <label for="orderNumber">Order Number</label>
+              <input type="text" name="orderNumber" id="orderNumber" />
+            </div>
+
+            <div>
+              <textarea name="message" id="message" cols="150" rows="30"></textarea>
+            </div>
+
+            <div>
+              <input type="hidden" name="myName" id="myName" value="CHUN-HUNG CHEN" />
+            </div>
+
+            <div>
+              <button type="submit">Submit</button>
+              <button type="reset">Reset</button>
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+      <footer>
+        <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
+        <form action="https://formspree.io/f/xleowzjd" method="POST">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="email-input"
+            placeholder="your@email.com"
+          />
+          <span class="email-btn">
+            <button type="submit">Subscribe</button>
+          </span>
+        </form>
+        <p>
+          <a href="https://facebook.com" target="_blank" style="float: left;">
+            <img
+              src="https://image.flaticon.com/icons/png/128/124/124010.png"
+              srcset="https://image.flaticon.com/icons/png/128/124/124010.png 4x"
+              alt="facebook"
+            />
+          </a>
+          <span>&copy; Cinderella 2020</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
