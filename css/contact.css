@@ -1,5 +1,5 @@
 .main {
-  font-size: 24px;
+  font-size: 1.2rem;
 }
 
 .main form {
@@ -15,8 +15,4 @@
 
 .orderNumber {
   display: none;
-}
-
-#message {
-  width: 100%;
 }

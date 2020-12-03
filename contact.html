@@ -4,6 +4,13 @@
     <meta charset="utf-8" />
     <title>Cinderella - Contact Us</title>
     <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/contact.css" />
     <link
@@ -19,75 +26,161 @@
       rel="stylesheet"
     />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <header>
         <a href="/"><img class="logo" src="/images/logo.png" alt="logo"/></a>
         <h1>Beauty Store</h1>
       </header>
 
-      <nav>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <section class="main">
         <h4 class="breadcrumbs" style="display: block;font-weight: unset;">Home > Contact Us</h4>
-        <form action="https://formspree.io/f/meqplngg" method="POST">
+        <form id="contact" action="https://formspree.io/f/meqplngg" method="POST">
           <!-- <form action="https://httpbin.org/post" method="POST"> -->
           <fieldset>
             <legend>Contact Us</legend>
 
-            <div>
-              <label for="name">Name:</label>
-              <input type="text" name="name" id="name" />
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+              />
             </div>
 
-            <div>
-              <label for="email">Email:</label>
-              <input type="email" name="email" id="email" />
+            <div class="form-group">
+              <label for="emailAddress">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                name="emailAddress"
+                id="emailAddress"
+                aria-describedby="emailHelp"
+                required
+              />
             </div>
 
-            <div>
-              <label for="city">City:</label>
-              <input list="cities" name="city" id="city" />
+            <div class="form-group">
+              <label for="city">City</label>
+              <input
+                list="cities"
+                class="form-control"
+                name="city"
+                id="city"
+                autocomplete="address-level2"
+                required
+              />
 
               <datalist id="cities">
-                <option value="Toronto"> </option>
+                <option value="Toronto">Toronto</option>
+                <option value="Vancouver">Vancouver</option>
+                <option value="Montreal">Montreal</option>
+                <option value="Niagara Falls">Niagara Falls</option>
+                <option value="Victoria">Victoria</option>
+                <option value="Halifax">Halifax</option>
+                <option value="Quebec City">Quebec City</option>
+                <option value="Calgary">Calgary</option>
+                <option value="Ottawa">Ottawa</option>
+                <option value="Edmonton">Edmonton</option>
               </datalist>
             </div>
 
-            <div>
-              <label for="postCode">Postal Code:</label>
-              <input type="text" name="postCode" id="postCode" />
+            <div class="form-group">
+              <label for="postCode">Postal Code</label>
+              <input
+                type="text"
+                class="form-control"
+                id="postCode"
+                name="postCode"
+                autocomplete="postal-code"
+                required
+              />
             </div>
 
-            <div>
-              <input type="radio" name="question" id="question" />Question
-              <input type="radio" name="comment" id="comment" />Comment
-              <input type="radio" name="orderProblem" id="orderProblem" />Order Problem
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="type"
+                id="question"
+                value="question"
+                checked
+              />
+              <label class="form-check-label" for="question">Question</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="type"
+                id="comment"
+                value="comment"
+              />
+              <label class="form-check-label" for="comment">Comment</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="type" id="order" value="order" />
+              <label class="form-check-label" for="order">Order Problem</label>
             </div>
 
-            <div class="orderNumber">
+            <div class="form-group orderNumber">
               <label for="orderNumber">Order Number</label>
-              <input type="text" name="orderNumber" id="orderNumber" />
+              <input type="text" class="form-control" id="orderNumber" name="orderNumber" />
+            </div>
+
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                rows="15"
+                required
+              ></textarea>
             </div>
 
             <div>
-              <textarea name="message" id="message" cols="150" rows="30"></textarea>
+              <input type="hidden" name="studentName" id="studentName" value="CHUN-HUNG CHEN" />
             </div>
 
             <div>
-              <input type="hidden" name="myName" id="myName" value="CHUN-HUNG CHEN" />
-            </div>
-
-            <div>
-              <button type="submit">Submit</button>
-              <button type="reset">Reset</button>
+              <button type="submit" class="btn btn-info">Submit</button>
+              <button type="reset" class="btn btn-info">Reset</button>
             </div>
           </fieldset>
         </form>
@@ -95,13 +188,14 @@
 
       <footer>
         <h4>SUBSCRIBE TO OUR NEWSLETTER</h4>
-        <form action="https://formspree.io/f/xleowzjd" method="POST">
+        <form id="subscribe" action="https://formspree.io/f/xleowzjd" method="POST">
           <input
             type="email"
             name="email"
             id="email"
             class="email-input"
             placeholder="your@email.com"
+            required
           />
           <span class="email-btn">
             <button type="submit">Subscribe</button>
@@ -119,5 +213,7 @@
         </p>
       </footer>
     </div>
+
+    <script src="/js/contact.js"></script>
   </body>
 </html>
