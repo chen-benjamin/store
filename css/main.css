@@ -156,7 +156,8 @@ footer form {
 }
 
 @media only screen and (max-width: 1000px) {
-  nav {
+  nav,
+  nav .nav-link {
     font-size: 3rem;
   }
 
