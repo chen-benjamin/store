@@ -22,7 +22,6 @@ function getTypeValue() {
 for (let i = 0; i < types.length; i++) {
   let orderGroup = document.getElementsByClassName('orderNumber')[0];
   types[i].addEventListener('click', () => {
-    console.log(getTypeValue());
     orderGroup.style.display = getTypeValue() === 'order' ? 'block' : 'none';
   });
 }

@@ -12,7 +12,6 @@ window.onload = function() {
   });
   Array.from(document.querySelectorAll('li:not(:last-child) a.nav-link')).forEach(element => {
     element.addEventListener('click', () => {
-      console.log(4444);
       if (cover.style.display !== 'none' || coverPhone.style.display !== 'none') {
         cover.style.display = 'none';
         coverPhone.style.display = 'none';
