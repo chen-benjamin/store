@@ -1,13 +1,12 @@
 /* global swal */
 const contactForm = document.getElementById('contact');
-const name = document.getElementById('name');
+const username = document.getElementById('name');
 const email = document.getElementById('emailAddress');
 const city = document.getElementById('city');
 const postCode = document.getElementById('postCode');
 const types = document.getElementsByName('type');
 const orderNumber = document.getElementById('orderNumber');
-const message = document.getElementById('message');
-const subscribeForm = document.getElementById('subscribe');
+const subscribeForm = document.getElementById('sub');
 
 function getTypeValue() {
   let val;
@@ -31,11 +30,11 @@ contactForm.addEventListener('submit', e => {
 
   let errMsg = null;
 
-  if (!name.value.match(/[a-zA-Z\s]+/)) {
+  if (!username.value.match(/[a-zA-Z\s]+/)) {
     errMsg = 'Please enter valid name';
   }
 
-  if (!email.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+  if (!email.value.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
     errMsg = 'Please enter valid email';
   }
 
@@ -57,7 +56,7 @@ contactForm.addEventListener('submit', e => {
 subscribeForm.addEventListener('submit', e => {
   e.preventDefault();
   let email = document.getElementById('email');
-  if (!email.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+  if (!email.value.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
     swal('Please enter valid email', '', 'warning');
   } else {
     e.target.submit();

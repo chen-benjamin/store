@@ -1,4 +1,4 @@
-/* global util, products */
+/* global util, products, swal */
 window.onload = function() {
   let bread = document.querySelector('.breadcrumbs');
   let cover = document.querySelector('.cover');
@@ -32,7 +32,7 @@ window.onload = function() {
   subscribeForm.addEventListener('submit', e => {
     e.preventDefault();
     let email = document.getElementById('email');
-    if (!email.value.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
+    if (!email.value.match(/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/)) {
       swal('Please enter valid email', '', 'warning');
     } else {
       e.target.submit();
